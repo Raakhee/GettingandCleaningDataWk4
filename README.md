@@ -1,5 +1,5 @@
 
-Getting and Cleaning Data Week4 project
+Getting and Cleaning Data Week4 project. 
 This text explains the runAnalysis.R code.
 
 This script reads all the test, train data files as well as the key files that list the measurements and activities.
@@ -12,6 +12,4 @@ This script reads all the test, train data files as well as the key files that l
 
 4. Script calculates mean and SD for each measurement column and stores it in meanCol and sdCol respectively.
 
-5. Script then measures the mean of the measurements grouped by Activity and Subject and writes it to a dataset called tidydata. This contains mean for every Activity-Subject combination so we get 180 (6 X 30) rows, each containing means of the 561 measurements.
-
-The tidydata is written to a text file. 
+5. Script then measures the mean of the measurements grouped by Activity and Subject and writes it to a dataset called tidydata. This contains mean for every Activity-Subject combination so we get 180 (6 X 30) rows, each containing means of the 561 measurements. The tidydata is written to a text file. 
