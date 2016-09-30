@@ -1,4 +1,4 @@
-# GettingandCleaningDataWk4
+
 Getting and Cleaning Data Week4 project
 This text explains the runAnalysis.R code.
 
