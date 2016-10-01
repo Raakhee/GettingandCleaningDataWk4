@@ -621,7 +621,7 @@ This data is then grouped and averaged by Subject and Activity and written to ou
 ### Output file: Tidydata.txt
 -----------------------------
 Contains info:
-Activity      
+Activity  
 Subject
 tBodyAcc-mean()-X
 tBodyAcc-mean()-Y
