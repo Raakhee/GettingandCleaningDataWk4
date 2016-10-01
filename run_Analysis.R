@@ -21,7 +21,7 @@ trainactvdata <- read.table("train/Y_train.txt",sep="\t",fill=TRUE,header=FALSE)
 featuresdata <- read.table("features.txt",stringsAsFactors=FALSE)
 
 # read activity labels
-activitylabels <- read.table("activity_labels.txt")
+activitylabels <- read.table("activity_labels.txt",stringsAsFactors=FALSE)
 
 # add Subject and Activity columns to testdata 
 testdata$Subject <- testsubjdata$V1
@@ -49,18 +49,19 @@ for (i in 1:nrow(featuresdata)) {
 	names(totaldata2)[names(totaldata2)==colnamold] <- featuresdata[i,2]
 } 
 
-# obtain mean and sd for each measurement
-# meansCol is a numeric array containing means of the 561 measurement columns. meansCol[i] will give mean of the 'i'th column of measurement 
-meansCol <- colMeans(totaldata2[,1:nrow(featuresdata)]) 
-# sdCol is a numeric array containing std deviations of the 561 measurement columns. sdCol[i] will give SD of the 'i'th column of measurement
-sdCol <- apply(totaldata2[,1:nrow(featuresdata)],2,FUN=sd)
+totaldata3 <- NULL
+## select mean and std columns and store results in totaldata3
+totaldata3 <- totaldata2[,grep("mean|std",names(totaldata2))]
+numOfMeasurements <- ncol(totaldata3)
+totaldata3$Subject <-  totaldata2$Subject
+totaldata3$Activity <- totaldata2$ActivityLabel
  
 # obtain mean for measurement data grouped by Activity and Subject
-tidydata <- aggregate(totaldata2[,1:nrow(featuresdata)],list(totaldata2$Activity,totaldata2$Subject),mean)
+tidydata <- aggregate(totaldata3[1:numOfMeasurements],list(totaldata3$Activity,totaldata3$Subject),mean)
 #tidydata <- rename(tidydata,c("Group.1"="Activity","Group.2"="Subject"))
 names(tidydata)[names(tidydata)=="Group.1"] = "Activity"
 names(tidydata)[names(tidydata)=="Group.2"] = "Subject"
 # head(tidydata)
 # write tidydata dataset to a text file
-write.table(tidydata,file="tidydata.txt",append=FALSE, sep=" ")
-# tidydata2 <- read.table("tidydata.txt,sep="")
+write.table(tidydata,file="tidydata.txt",append=FALSE, sep=" ",row.name=FALSE)
+# tidydata2 <- read.table("tidydata.txt",sep="")
