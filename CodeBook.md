@@ -34,7 +34,6 @@ description (Walking, Walking_Upstairs, Walking_Downstairs,Sitting, Standing, La
 File name: features.txt 
 ------------------------
 Contains: measurement parameter id numbers and descriptions
-
 1 tBodyAcc-mean()-X
 2 tBodyAcc-mean()-Y
 3 tBodyAcc-mean()-Z
@@ -596,6 +595,7 @@ Contains: measurement parameter id numbers and descriptions
 559 angle(X,gravityMean)
 560 angle(Y,gravityMean)
 561 angle(Z,gravityMean)
+
 
 Subject_test.txt/Subject_train.txt
 -----------------------------------
