@@ -34,7 +34,7 @@ description (Walking, Walking_Upstairs, Walking_Downstairs,Sitting, Standing, La
 File name: features.txt 
 ------------------------
 Contains: measurement parameter id numbers and descriptions
-*						
+				
 *	1 tBodyAcc-mean()-X					
 *	2 tBodyAcc-mean()-Y					
 *	3 tBodyAcc-mean()-Z					
@@ -623,7 +623,7 @@ This data is then grouped and averaged by Subject and Activity and written to ou
 ### Output file: Tidydata.txt
 -----------------------------
 Contains info:
-*						
+			
 *	 Activity  					
 *	  Subject					
 *	  tBodyAcc-mean()-X					
