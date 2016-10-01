@@ -34,9 +34,10 @@ description (Walking, Walking_Upstairs, Walking_Downstairs,Sitting, Standing, La
 File name: features.txt 
 ------------------------
 Contains: measurement parameter id numbers and descriptions
-1 tBodyAcc-mean()-X
-2 tBodyAcc-mean()-Y
-3 tBodyAcc-mean()-Z
+
+  1 tBodyAcc-mean()-X
+  2 tBodyAcc-mean()-Y
+  3 tBodyAcc-mean()-Z
 4 tBodyAcc-std()-X
 5 tBodyAcc-std()-Y
 6 tBodyAcc-std()-Z
@@ -594,8 +595,7 @@ Contains: measurement parameter id numbers and descriptions
 558 angle(tBodyGyroJerkMean,gravityMean)
 559 angle(X,gravityMean)
 560 angle(Y,gravityMean)
-561 angle(Z,gravityMean)
-
+561 angle(Z,gravityMean) 
 
 Subject_test.txt/Subject_train.txt
 -----------------------------------
@@ -621,9 +621,9 @@ This data is then grouped and averaged by Subject and Activity and written to ou
 ### Output file: Tidydata.txt
 -----------------------------
 Contains info:
-Activity  
-Subject
-tBodyAcc-mean()-X
+  Activity  
+  Subject
+  tBodyAcc-mean()-X
 tBodyAcc-mean()-Y
 tBodyAcc-mean()-Z              
 tBodyAcc-std()-X
